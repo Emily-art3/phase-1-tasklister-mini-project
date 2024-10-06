@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="main-content">
-    <h1>Task Lister Lite™️</h1>
+    <h1>Task Lister Lite™</h1>
 
     <!--task description input-->
     <form id="create-task-form" action="#" method="POST">
@@ -20,7 +20,17 @@
         required>
       
 
-     <!--task priority for added tasks-->
+      <label for="user">User:</label>
+      <input type="text" id="user" name="user" placeholder="User" required>
+
+      <label for="duration">Duration:</label>
+      <input type="number" id="duration" name="duration" placeholder="Duration (hours)" required>
+
+       <!--more input data display for when task are due-->
+      <label for="due-date">Due date:</label>
+      <input type="date" id="due-date" required>
+
+      <!--task priority for added tasks-->
       <label for="task-priority">Priority:</label>
       <select id="task-priority">
         <option value="low">Low</option>
@@ -28,23 +38,16 @@
         <option value="high">High</option>
       </select>
 
-       <!--more input data display for when task are due-->
-      <label for="due-date">Due date:</label>
-      
-      <input type="date" id="due-date" required>
-
       <!-- Submit button for adding a new task -->
-      <button type="submit" id="submit-task">Add New Task</button>
+      <input type="submit" value="Create New Task">
     </form>
 
-    <button type="button" id="sort-tasks">Sort Tasks</button>
+    <button type="button" id="sort-button">Sort Tasks by Priority</button>
 
     <!-- Task list where tasks will be displayed -->
     <div id="task-list">
       <h2>My Todos:</h2>
-      <ul id="tasks">
-        <!-- Task items will be appended here -->
-      </ul>
+      <ul id="tasks"></ul>
     </div>
 
     <!-- Task count -->
